@@ -5,7 +5,7 @@ import { Tags } from "./Tags/Tags";
 import { Interact } from "./Interact/Connector";
 import "./Band.scss";
 
-export const Band = ({ 
+export const Band = ({
   band: {
     name,
     price,

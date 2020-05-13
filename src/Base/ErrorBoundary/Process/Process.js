@@ -1,46 +1,35 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Layout } from "../../Layout/Layout";
-import { Search } from './Search/Connector';
+import { Search } from './Search/Search';
 import { PROCESSES } from "../../../api/reducers/process/processes";
+import Bands from "./Bands/Connector";
+import LoginWrapper from './Login/LoginWrapper/LoginWrapper';
+import BandArea from './Login/BandArea/Connector';
+import Info from "./Info/Connector";
+import "./Process.scss";
+
+const NotFound = () => <p>Wir konnten die Seite leider nicht finden</p>;
 
 const getComponentByProcess = (process) => {
-  if (process === PROCESSES.search) return <Search />
-  if (process === PROCESSES.bands) {
-    const Bands = React.lazy(() => import("./Bands/Connector"));
-
-    return (
-      <Suspense fallback="laden">
-        <Bands />
-      </Suspense>
-    )
+  switch (process) {
+    case PROCESSES.search:
+      return <Search />;
+    case PROCESSES.bands:
+      return <Bands />;
+    case PROCESSES.login:
+      return <LoginWrapper />;
+    case PROCESSES.bandArea:
+      return <BandArea />;
+    case PROCESSES.info:
+      return <Info />;
+    default:
+      return (
+        <>
+          <NotFound />
+          <Search />
+        </>
+      );
   }
-  if (process === PROCESSES.login) {
-    const LoginWrapper = React.lazy(() => import("./Login/LoginWrapper/LoginWrapper"));
-
-    return (
-      <Suspense fallback="laden">
-        <LoginWrapper />
-      </Suspense>
-    )
-  }
-  if (process === PROCESSES.bandArea) {
-    const BandArea = React.lazy(() => import("./Login/BandArea/Connector"))
-    return (
-      <Suspense fallback="laden">
-        <BandArea />
-      </Suspense>
-    );
-  }
-  if (process === PROCESSES.info) {
-    const Info = React.lazy(() => import("./Info/Connector"));
-
-    return (
-      <Suspense fallback="laden">
-        <Info />
-      </Suspense>
-    )
-  }
-  return <div>TODO</div>
 }
 
 /**
@@ -49,7 +38,9 @@ const getComponentByProcess = (process) => {
 export const Process = ({ process }) => {
   return (
     <Layout>
-      {getComponentByProcess(process)}
+      <div className="Process">
+        {getComponentByProcess(process)}
+      </div>
     </Layout>
   );
 }

@@ -2,13 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: "development",
   entry: {
-    app: './src/App.js',
-    login: "./src/Base/ErrorBoundary/Process/Login/LoginWrapper/LoginWrapper.js"
+    app: './src/App.js'
   },
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: '[name].bundle.js'
+    filename: 'app.bundle.js'
   },
   module: {
     rules: [
@@ -29,10 +29,5 @@ module.exports = {
   })],
   devServer: {
     contentBase: path.join(__dirname, 'public')
-  },
-  optimization: {
-    splitChunks: {
-      chunks: "all"
-    }
   }
 };

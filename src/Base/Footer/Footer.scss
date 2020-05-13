@@ -1,0 +1,11 @@
+@import "src/style/globals";
+@import "src/style/padding";
+
+footer {
+  @include use-padding();
+  position: relative;
+  bottom: $footer-height * -1;
+  height: $footer-height;
+  background-color: #fff;
+  width: 100vw;
+}

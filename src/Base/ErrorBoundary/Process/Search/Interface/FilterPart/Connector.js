@@ -1,14 +1,14 @@
-import { connect } from '../../../../api/Provider/connect';
-import { goToBands } from "../../../../api/reducers/reducers";
-import { Search as _Search } from './Search';
-import { 
+import { connect } from '../../../../../../api/Provider/connect';
+import { goToBands } from "../../../../../../api/reducers/reducers";
+import { FilterPart as _FilterPart } from './Search';
+import {
   setEventFilter,
   setKindFilter
-} from "../../../../api/reducers/filter/actionCreators";
+} from "../../../../../../api/reducers/filter/actionCreators";
 import {
   getKindFilter,
   getEventFilter
-} from '../../../../api/selectors/filter/filter';
+} from '../../../../../../api/selectors/filter/filter';
 
 const mapStateToProps = state => ({
   event: getEventFilter(state),
@@ -21,7 +21,7 @@ const mapDispatchToProps = dispatch => ({
   onSetKindFilter: kind => dispatch(setKindFilter(kind))
 });
 
-export const Search = connect(
+export const FilterPart = connect(
   mapStateToProps,
   mapDispatchToProps
-)(_Search);
+)(_FilterPart);

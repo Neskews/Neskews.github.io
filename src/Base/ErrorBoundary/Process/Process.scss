@@ -1,0 +1,11 @@
+@import "src/style/padding";
+@import "src/style/globals";
+
+.Process {
+  @include use-side-padding;
+  @include use-bottom-padding;
+  
+  .btn {
+    margin-top: 24px;
+  }
+}

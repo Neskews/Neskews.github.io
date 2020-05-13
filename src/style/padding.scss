@@ -7,6 +7,13 @@
   }
 }
 
+@mixin use-side-margin {
+  margin: {
+    left: 12px;
+    right: 12px;
+  }
+}
+
 @mixin use-top-bottom-padding {
   padding: {
     top: 12px;

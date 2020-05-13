@@ -1,6 +1,7 @@
-import React  from 'react';
+import React from 'react';
 import Header from './Header/Connector';
-import { ErrorBoundary } from './ErrorBoundary/ErrorBoundary';
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
+import { Footer } from "./Footer/Footer";
 import "../style/reset.scss";
 
 /**
@@ -8,9 +9,10 @@ import "../style/reset.scss";
  */
 export const Base = () => {
   return (
-    <div>
+    <main>
       <Header />
       <ErrorBoundary />
-    </div>
+      <Footer />
+    </main>
   );
 }

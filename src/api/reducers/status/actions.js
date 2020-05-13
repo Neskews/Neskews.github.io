@@ -1,2 +1,3 @@
 export const START_FETCHING = "START_FETCHING";
 export const END_FETCHING = "END_FETCHING";
+export const FAILED_FETCHING = "FAILED_FETCHING";

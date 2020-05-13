@@ -14,7 +14,8 @@ import { setHire } from './hire/actionCreators';
 import { status } from "./status/status";
 import {
   startFetching,
-  endFetching
+  endFetching,
+  failedFetching
 } from './status/actionCreators';
 
 export const main = (state, action) => {
@@ -28,7 +29,7 @@ export const main = (state, action) => {
   nextState = {
     ...nextState,
     status: status(nextState.status, action)
-  }
+  };
   nextState = {
     ...nextState,
     filters: filter(nextState.filters, action)
@@ -46,5 +47,6 @@ export {
   setLogin,
   setHire,
   startFetching,
-  endFetching
+  endFetching,
+  failedFetching
 }

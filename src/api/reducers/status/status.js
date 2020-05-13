@@ -1,9 +1,10 @@
-import { 
+import {
   START_FETCHING,
-  END_FETCHING
- } from "./actions";
+  END_FETCHING,
+  FAILED_FETCHING
+} from "./actions";
 
-export const status = (state, { type }) => {
+export const status = (state, { type, error }) => {
   switch (type) {
     case START_FETCHING:
       return {
@@ -15,6 +16,11 @@ export const status = (state, { type }) => {
         ...state,
         isFetching: false
       }
+    case FAILED_FETCHING:
+      return {
+        state,
+        error
+      };
     default:
       return state;
   }

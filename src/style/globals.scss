@@ -2,12 +2,14 @@ $background-color: #e0e0e0;
 $primary-color: #ED3F00;
 $filter-color: saddlebrown;
 $color: #333;
-$border-color: #eee;
+$border-color: #aaa;
 
-$large-font: 24px;
-$middle-font: 20px;
-$small-font: 14px;
-$text-font: 12px;
+$large-font: 2em;
+$middle-font: .2em;
+$small-font: .8em;
+$text-font: 1em;
 
 $border-soft: 1px solid $border-color;
 $border-hard: 1px solid $primary-color;
+
+$footer-height: 200px;

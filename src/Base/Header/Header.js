@@ -3,16 +3,14 @@ import { Layout } from "../Layout/Layout";
 import { SecondaryButton } from "../Components/Button/Button";
 import "./Header.scss";
 
-export const Header = ({ 
-  onGoToSearch,
-  onGoToLogin 
+export const Header = ({
+  error,
+  onGoToLogin
 }) => {
   return (
     <header>
       <Layout>
-        <div onClick={onGoToSearch}>
-          Buche einen Musiker
-        </div>
+        <span>{error}</span>
         <SecondaryButton
           label="Login"
           onClick={onGoToLogin}

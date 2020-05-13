@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{61:function(n,e,t){"use strict";t.r(e);var a=t(0),c=t.n(a),i=t(7),r=t(12);e.default=Object(i.a)((function(n){return{login:Object(r.c)(n)}}))((function(n){var e=n.login;return c.a.createElement("div",{className:"BandArea"},JSON.stringify(e))}))}}]);
-//# sourceMappingURL=6.bundle.js.map

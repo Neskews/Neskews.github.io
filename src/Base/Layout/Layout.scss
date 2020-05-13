@@ -1,12 +1,10 @@
-@import "src/style/mixins";
+@import "src/style/responsive";
 
 .Layout {
-  background-color: #fff;
   margin: 0 auto;
-  @include use-side-padding;
 
   @include mobile {
-    padding: 0 16px;
+    width: 100%;
   }
 
   @include desktop {

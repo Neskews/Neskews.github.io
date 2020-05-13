@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Base } from './Base/Base';
+import { Base } from './Base/Base';
 import { Provider } from './api/Provider/Provider';
 
 /**

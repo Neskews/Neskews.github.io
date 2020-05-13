@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./TextInput.scss";
 
 export const TextInput = ({

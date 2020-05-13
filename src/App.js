@@ -1,20 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Base } from './Base/Base';
-import { Provider } from './api/Provider/Provider';
+import { Topic } from './Topic/Topic';
+import data from "./data.json"
+import "./App.scss";
+import { Header } from "./Header/Header";
 
-/**
- * Provides the <Base /> with the state
- */
-const App = () => {
-  return (
-    <Provider>
-      <Base />
-    </Provider>
-  )
+function App() {
+    return (
+        <div className="App">
+            <Header />
+            <main>
+                {data.map((data, key) => (
+                    <Topic data={data} key={key} />
+                ))}
+            </main>
+        </div>
+    );
 }
 
-ReactDOM.render(
-  React.createElement('div', {}, <App />),
-  document.getElementById('root')
-);
+export default App;

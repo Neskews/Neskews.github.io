@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Setlist",
+    "content": {
+      "type": "list",
+      "values": [
+        "Rudolph the red nosed reindeer",
+        "It's beginning to look like christmas",
+        "Feliz Navidad",
+        "Alle klassischen Weihnachtslieder"
+      ]
+    }
+  },
+  {
+    "name": "Locations",
+    "content": {
+      "type": "locations",
+      "values": [
+        {
+          "where": "Aachen",
+          "when": "Mon Dec 21 2019"
+        }
+      ]
+    }
+  }
+]
